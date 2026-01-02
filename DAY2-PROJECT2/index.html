@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Control Panel - Day 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <h1>State Control Panel</h1>
+        <p>Day 2: JavaScript State Management</p>
+      </header>
+      
+      <main class="card-content">
+        <div class="counter-display">
+          <h2 id="count">0</h2>
+        </div>
+        
+        <div class="counter-actions">
+          <button id="increase" class="btn-primary">Increase</button>
+          <button id="decrease" class="btn-secondary">Decrease</button>
+          <button id="reset" class="btn-reset">Reset</button>
+        </div>
+        
+        <div class="counter-info">
+          <small>localStorage persistent</small>
+        </div>
+      </main>
+      
+      <footer class="card-footer">
+        <button id="themeBtn" class="btn-theme" aria-label="Toggle theme">
+          <span class="sun">☀️</span>
+          <span class="moon">🌙</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

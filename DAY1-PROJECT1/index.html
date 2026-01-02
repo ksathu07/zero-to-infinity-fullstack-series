@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Profile - Zero to Infinity Day 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <h1>Smart Profile</h1>
+        <p>Mini dashboard base for Zero to Infinity series</p>
+      </header>
+      
+      <main class="card-content">
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name">
+        </div>
+        
+        <div class="input-group">
+          <label for="role">Role</label>
+          <input type="text" id="role" placeholder="Your Role">
+        </div>
+        
+        <div class="actions">
+          <button id="saveBtn" class="btn-primary">Save Profile</button>
+          <button id="themeBtn" class="btn-secondary" aria-label="Toggle theme">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+          </button>
+        </div>
+        
+        <div id="output" class="output hidden">
+          <p>Welcome, <span id="displayName"></span> (<span id="displayRole"></span>)!</p>
+        </div>
+        
+        <div id="error" class="error hidden"></div>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
