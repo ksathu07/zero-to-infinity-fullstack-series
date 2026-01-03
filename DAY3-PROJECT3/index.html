@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Manager - Day 3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <h1>User Profile Manager</h1>
+        <p>Day 3 · User Profile Management System</p>
+      </header>
+
+      <main class="card-body">
+        <!-- Form column -->
+        <section class="form-section">
+          <h2>Profile Details</h2>
+          <div class="field">
+            <label for="name">Name<span class="required">*</span></label>
+            <input id="name" type="text" placeholder="Kapil">
+            <small class="error" id="nameError"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email<span class="required">*</span></label>
+            <input id="email" type="email" placeholder="kapil@email.com">
+            <small class="error" id="emailError"></small>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="9999999999">
+          </div>
+          <div class="field">
+            <label for="role">Role</label>
+            <input id="role" type="text" placeholder="Intern">
+          </div>
+
+          <div class="actions">
+            <button id="saveBtn" class="btn primary">Save Profile</button>
+            <button id="updateBtn" class="btn">Update Profile</button>
+            <button id="deleteBtn" class="btn danger">Delete</button>
+            <button id="clearBtn" class="btn ghost">Clear</button>
+          </div>
+        </section>
+
+        <!-- List column -->
+        <section class="list-section">
+          <div class="list-header">
+            <h2>Stored Profiles</h2>
+            <span id="countBadge" class="badge">0</span>
+          </div>
+
+          <div id="emptyState" class="empty-state">
+            No profiles yet. Start by saving one.
+          </div>
+
+          <table id="profileTable" class="table hidden">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Last Updated</th>
+              </tr>
+            </thead>
+            <tbody id="profileTbody"></tbody>
+          </table>
+
+          <pre id="output" class="json-viewer"></pre>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
