@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Async Data Dashboard - Day 4</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <h1>Async Data Dashboard</h1>
+        <p>Day 4 · Promises, Fetch & Error Handling</p>
+      </header>
+
+      <main class="card-body">
+        <section class="controls">
+          <button id="loadBtn" class="btn primary">Load Data</button>
+          <button id="retryBtn" class="btn secondary" disabled>Retry</button>
+          <span id="status" class="status status-idle">Idle</span>
+        </section>
+
+        <section class="result">
+          <div id="errorBox" class="error-box hidden"></div>
+          <pre id="output" class="json-viewer">
+// Click "Load Data" to fetch user profile...
+          </pre>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
