@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RBAC Dashboard - Day 5</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+
+      <header class="card-header">
+        <h1>RBAC Dashboard</h1>
+        <p>Day 5 · Role-Based Access Control System</p>
+      </header>
+
+      <main class="card-body">
+
+        <!-- Login view -->
+        <section id="loginView" class="login-section">
+          <h2>Login</h2>
+          <div class="field">
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="sathursan" />
+            <small id="usernameError" class="error"></small>
+          </div>
+
+          <div class="field">
+            <label for="role">Role</label>
+            <select id="role">
+              <option value="admin">Admin</option>
+              <option value="user">User</option>
+            </select>
+          </div>
+
+          <button id="loginBtn" class="btn primary full">Login</button>
+          <p class="hint">Login once as Admin and once as User to see panels change.</p>
+        </section>
+
+        <!-- Dashboard view -->
+        <section id="dashboardView" class="dashboard-section hidden">
+          <header class="dashboard-header">
+            <div>
+              <h2>Dashboard</h2>
+              <p id="welcome" class="welcome"></p>
+            </div>
+            <button id="logoutBtn" class="btn ghost">Logout</button>
+          </header>
+
+          <div class="panels">
+            <div id="adminPanel" class="panel hidden">
+              <h3>Admin Panel</h3>
+              <p>Manage high‑risk operations.</p>
+              <button class="btn danger">Delete Records</button>
+            </div>
+
+            <div id="userPanel" class="panel hidden">
+              <h3>User Panel</h3>
+              <p>View records and personal data.</p>
+              <button class="btn secondary">View Records</button>
+            </div>
+          </div>
+
+          <div class="meta">
+            <h4>Current Session</h4>
+            <pre id="sessionOutput" class="json-viewer"></pre>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
