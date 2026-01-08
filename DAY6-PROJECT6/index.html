@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auth & Session System - Day 6</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+
+      <header class="card-header">
+        <h1>Authentication System</h1>
+        <p>Day 6 · Login & Session Control</p>
+      </header>
+
+      <main class="card-body">
+
+        <!-- Login view -->
+        <section id="loginView" class="login-section">
+          <h2>Login</h2>
+          <div class="field">
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="admin" />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="1234" />
+          </div>
+          <small id="loginError" class="error"></small>
+
+          <button id="loginBtn" class="btn primary full">Login</button>
+          <p class="hint">Use <strong>admin / 1234</strong> to sign in.</p>
+        </section>
+
+        <!-- Dashboard view -->
+        <section id="dashboardView" class="dashboard-section hidden">
+          <header class="dashboard-header">
+            <div>
+              <h2>Dashboard</h2>
+              <p id="userInfo" class="welcome"></p>
+            </div>
+            <button id="logoutBtn" class="btn ghost">Logout</button>
+          </header>
+
+          <div class="panel">
+            <h3>Session Details</h3>
+            <p>This area is visible only when authenticated.</p>
+            <pre id="sessionOutput" class="json-viewer"></pre>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
