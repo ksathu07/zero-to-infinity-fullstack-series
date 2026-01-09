@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Database - Day 7</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+
+      <header class="card-header">
+        <h1>Client-Side Database</h1>
+        <p>Day 7 · Multi-User Storage & Query Engine</p>
+      </header>
+
+      <main class="card-body">
+        <section class="form-section">
+          <h2>Add Record</h2>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Kapil" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="kapil@email.com" />
+          </div>
+          <small id="formError" class="error"></small>
+          <button id="addBtn" class="btn primary full">Add Record</button>
+        </section>
+
+        <section class="list-section">
+          <header class="list-header">
+            <div>
+              <h2>Records</h2>
+              <p class="hint">Search by name, delete rows, and refresh to test persistence.</p>
+            </div>
+            <div class="search-group">
+              <input id="search" type="text" placeholder="Search by name..." />
+              <button id="searchBtn" class="btn secondary">Search</button>
+              <button id="clearSearchBtn" class="btn ghost">Clear</button>
+            </div>
+          </header>
+
+          <div id="emptyState" class="empty-state">
+            No records yet. Add your first client.
+          </div>
+
+          <table id="table" class="table hidden">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
