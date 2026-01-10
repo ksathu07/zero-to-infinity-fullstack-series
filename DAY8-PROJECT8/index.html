@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Login - Remember Me (Day 8)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+
+      <header class="card-header">
+        <h1>Secure Login</h1>
+        <p>Day 8 · Remember Me & Session Control</p>
+      </header>
+
+      <main class="card-body">
+        <!-- Login -->
+        <section id="loginView" class="login-section">
+          <h2>Login</h2>
+
+          <div class="field">
+            <label for="user">Username</label>
+            <input id="user" type="text" placeholder="admin" />
+          </div>
+
+          <div class="field">
+            <label for="pass">Password</label>
+            <input id="pass" type="password" placeholder="1234" />
+          </div>
+
+          <div class="remember-row">
+            <label class="remember-label">
+              <input id="remember" type="checkbox" />
+              <span>Remember Me</span>
+            </label>
+          </div>
+
+          <small id="loginError" class="error"></small>
+
+          <button id="loginBtn" class="btn primary full">Login</button>
+          <p class="hint">Remember Me = long session (localStorage). Unchecked = tab-only session (sessionStorage).</p>
+        </section>
+
+        <!-- Dashboard -->
+        <section id="dash" class="dashboard-section hidden">
+          <header class="dashboard-header">
+            <div>
+              <h2>Dashboard</h2>
+              <p id="info" class="welcome"></p>
+            </div>
+            <button id="logoutBtn" class="btn ghost">Logout</button>
+          </header>
+
+          <div class="panel">
+            <h3>Session Details</h3>
+            <p>Below is the stored session object (for learning only).</p>
+            <pre id="sessionOutput" class="json-viewer"></pre>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
