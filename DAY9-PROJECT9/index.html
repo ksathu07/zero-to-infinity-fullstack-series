@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client–Server Simulator - Day 9</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <h1>API Request–Response Simulator</h1>
+        <p>Day 9 · Client–Server Model in Pure JavaScript</p>
+      </header>
+
+      <main class="card-body">
+        <section class="form-section">
+          <h2>Client Request</h2>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter your name" />
+          </div>
+          <small id="formError" class="error"></small>
+          <button id="sendBtn" class="btn primary full">Send Request</button>
+
+          <h3>Built Request Payload</h3>
+          <pre id="requestOutput" class="json-viewer small">// Request JSON will appear here</pre>
+        </section>
+
+        <section class="response-section">
+          <div class="response-header">
+            <h2>Server Response</h2>
+            <span id="statusBadge" class="badge status-idle">Idle</span>
+          </div>
+          <pre id="responseOutput" class="json-viewer">// Response JSON will appear here</pre>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
