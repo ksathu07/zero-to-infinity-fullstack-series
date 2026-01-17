@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Orchestrator - Day 10</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <h1>Service Orchestrator</h1>
+        <p>Day 10 · Multi-Service Workflow Engine</p>
+      </header>
+
+      <main class="card-body">
+        <section class="controls">
+          <button id="runBtn" class="btn primary">Run Workflow</button>
+          <button id="clearBtn" class="btn ghost">Clear Log</button>
+        </section>
+
+        <section class="log-section">
+          <div class="log-header">
+            <h2>Execution Log</h2>
+            <span id="statusBadge" class="badge status-idle">Idle</span>
+          </div>
+          <pre id="log" class="log-viewer">// Click "Run Workflow" to start the pipeline</pre>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
