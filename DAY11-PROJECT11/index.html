@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Error Handling System - Day 11</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <h1>Error Handling System</h1>
+        <p>Day 11 · Failure-Aware Engineering</p>
+      </header>
+
+      <main class="card-body">
+        <form class="form" id="emailForm">
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email (e.g. user@example.com)"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn primary" id="submitBtn">
+            Submit Form
+          </button>
+        </form>
+
+        <div class="feedback" id="status">
+          <span class="feedback-icon">ℹ️</span>
+          <span>Enter email and submit to test error handling.</span>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
