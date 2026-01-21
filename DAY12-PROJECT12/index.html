@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Observability Dashboard - Day 12</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <h1>System Health Dashboard</h1>
+        <p>Day 12 · Observability & Monitoring</p>
+      </header>
+
+      <main class="card-body">
+        <div class="alert" id="alert">
+          <span class="alert-icon">🟢</span>
+          <span>All systems healthy</span>
+        </div>
+
+        <div class="table-container">
+          <table class="health-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Status</th>
+                <th>Last Updated</th>
+              </tr>
+            </thead>
+            <tbody id="dashboard">
+              <!-- Live populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="legend">
+          <span class="legend-item healthy">🟢 Healthy</span>
+          <span class="legend-item degraded">🟡 Degraded</span>
+          <span class="legend-item down">🔴 Down</span>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
