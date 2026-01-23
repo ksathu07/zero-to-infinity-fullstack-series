@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resilience System - Day 13</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <h1>Resilience & Recovery</h1>
+        <p>Day 13 · Failure Simulation + Rollback</p>
+      </header>
+
+      <main class="card-body">
+        <div class="controls">
+          <button id="injectBtn" class="btn danger">💥 Inject Failure</button>
+          <button id="recoverBtn" class="btn warning">🔄 Recover</button>
+          <button id="rollbackBtn" class="btn success">↩️ Rollback</button>
+        </div>
+
+        <div class="table-container">
+          <table class="status-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="system">
+              <!-- Live populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <section class="log-section">
+          <h3>Incident Log</h3>
+          <div id="log" class="log-container">
+            <!-- Live events -->
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
