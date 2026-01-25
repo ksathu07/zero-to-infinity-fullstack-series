@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Governance System - Day 14</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="card-header">
+        <h1>Governance & Compliance</h1>
+        <p>Day 14 · Role-Based Access Control</p>
+      </header>
+
+      <main class="card-body">
+        <div class="role-selector">
+          <label for="role">Select Role:</label>
+          <select id="role">
+            <option value="Guest">👤 Guest</option>
+            <option value="User" selected>👤 User</option>
+            <option value="Manager">👨‍💼 Manager</option>
+            <option value="Admin">🔑 Admin</option>
+          </select>
+        </div>
+
+        <div class="actions-grid">
+          <button onclick="performAction('View')" class="btn neutral">👁️ View</button>
+          <button onclick="performAction('Create')" class="btn neutral">➕ Create</button>
+          <button onclick="performAction('Edit')" class="btn neutral">✏️ Edit</button>
+          <button onclick="performAction('Delete')" class="btn danger">🗑️ Delete</button>
+          <button onclick="performAction('Policy')" class="btn warning">⚙️ Policy Change</button>
+        </div>
+
+        <section class="audit-section">
+          <h3>Audit Log</h3>
+          <div id="log" class="audit-log">
+            <!-- Live audit entries -->
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
